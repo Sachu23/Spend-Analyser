@@ -34,6 +34,18 @@ const ExpenseSchema = new mongoose.Schema({
         maxLength: 20,
         trim: true
     },
+    email: {
+        type: String,
+        required: true,
+        maxLength: 45,
+        trim: true,
+        validate: {
+            validator: function(v) {
+                return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v);
+            },
+            message: props => `${props.value} is not a valid email address!`
+        }
+    }
 }, {timestamps: true})
 
 module.exports = mongoose.model('Expense', ExpenseSchema)

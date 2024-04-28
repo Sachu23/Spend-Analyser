@@ -15,10 +15,10 @@ function ExpenseForm() {
         date: '',
         category: '',
         description: '',
-        user: localStorage.getItem('email')
+        email: localStorage.getItem('email')
     })
 
-    const { title, amount, date, category,description } = inputState;
+    const { title, amount, date, category,description, email } = inputState;
 
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})

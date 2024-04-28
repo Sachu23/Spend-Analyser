@@ -24,7 +24,10 @@ export const GlobalProvider = ({children}) => {
     }
 
     const getIncomes = async () => {
-        const response = await axios.get(`${BASE_URL}get-incomes`);
+        let email = localStorage.getItem('email');
+        const response = await axios.get(`${BASE_URL}get-incomes`, {params: {
+            email
+        }});
         setIncomes(response.data);
         console.log(response.data);
     }
@@ -54,7 +57,10 @@ export const GlobalProvider = ({children}) => {
     }
 
     const getExpenses = async () => {
-        const response = await axios.get(`${BASE_URL}get-expenses`)
+        let email = localStorage.getItem('email');
+        const response = await axios.get(`${BASE_URL}get-expenses`, {params: {
+            email
+        }});
         setExpenses(response.data)
         console.log(response.data)
     }

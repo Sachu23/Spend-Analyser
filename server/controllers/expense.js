@@ -2,19 +2,20 @@ const ExpenseSchema = require("../models/ExpenseModel")
 
 
 exports.addExpense = async (req, res) => {
-    const {title, amount, category, description, date}  = req.body
+    const {title, amount, category, description, date, email}  = req.body
 
     const income = ExpenseSchema({
         title,
         amount,
         category,
         description,
-        date
+        date,
+        email
     })
 
     try {
         //validations
-        if(!title || !category || !description || !date){
+        if(!title || !category || !description || !date || !email){
             return res.status(400).json({message: 'All fields are required!'})
         }
         if(amount <= 0 || !amount === 'number'){
@@ -31,7 +32,7 @@ exports.addExpense = async (req, res) => {
 
 exports.getExpense = async (req, res) =>{
     try {
-        const incomes = await ExpenseSchema.find().sort({createdAt: -1})
+        const incomes = await ExpenseSchema.find({ email: req.query.email }).sort({createdAt: -1})
         res.status(200).json(incomes)
     } catch (error) {
         res.status(500).json({message: 'Server Error'})
