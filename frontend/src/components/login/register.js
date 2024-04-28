@@ -85,6 +85,7 @@ const Register = (props) => {
     }
   return (
     <div className={'mainContainer'}>
+      <div className={'extracontainer'}>
       <div className={'titleContainer'}>
         <div>Register</div>
       </div>
@@ -138,6 +139,7 @@ const Register = (props) => {
       <div className={'inputContainer'}>
         <input className={'inputButton'} type="button" onClick={onButtonClick} value={'Register'} />
         <label className="errorLabel">{registerOutput}</label>
+      </div>
       </div>
     </div>
   )

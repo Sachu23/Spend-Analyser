@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: linear-gradient(68.3deg, rgb(23, 41, 77) 6.3%, rgb(243, 113, 154) 90.9%);
 }
 
 .titleContainer {
@@ -13,6 +14,8 @@
   font-weight: bolder;
   align-items: center;
   justify-content: center;
+  color: white;
+  padding: 30px;
 }
 
 .resultContainer,
@@ -61,3 +64,25 @@
   border: 1px solid grey;
   padding-left: 8px;
 }
+
+.extracontainer {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 60vh;
+    background-color: black;
+    border-radius: 15px 15px 15px 15px;
+    opacity: .8;
+  }
+
+  .inputButton {
+    height: 40px;
+  width: 100px;
+  font-size: large;
+  border-radius: 4px;
+  border: 1px solid grey;
+  padding: 8px;
+  background-color: #24a0ed;
+  }

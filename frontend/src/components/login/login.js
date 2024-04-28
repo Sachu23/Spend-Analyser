@@ -75,9 +75,11 @@ const Login = ({setLoggedIn, preppre}) => {
 
   return (
     <div className={'mainContainer'}>
+      <div className={'extracontainer'}>
       <div className={'titleContainer'}>
         <div>Login</div>
       </div>
+      <br />
       <br />
       <div className={'inputContainer'}>
         <input
@@ -99,11 +101,20 @@ const Login = ({setLoggedIn, preppre}) => {
         <label className="errorLabel">{passwordError}</label>
       </div>
       <br />
+      <br />
       <div className={'inputContainer'}>
         <input className={'inputButton'} type="button" onClick={onButtonClick} value={'Log in'} />
       </div>
+      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className={'inputContainer'}>
         <input className={'inputButton'} type="button" onClick={navigateToRegister} value={'Register'} />
+      </div>
       </div>
     </div>
   )
