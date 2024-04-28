@@ -8,12 +8,6 @@ import Chart from '../Chart/Chart';
 
 function Dashboard() {
     const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext();
-    console.log(totalExpenses);
-    console.log(incomes);
-    console.log(expenses);
-    console.log(totalIncome);
-    console.log(totalBalance);
-    console.log(getIncomes);
 
     useEffect(() => {
         getIncomes()
