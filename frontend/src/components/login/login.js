@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./login.css";
+//import config from '../../config/.config'
+import config from '../../config/config.js'
 
 const Login = ({setLoggedIn, preppre}) => {
   const [email, setEmail] = useState('')
@@ -36,7 +38,7 @@ const Login = ({setLoggedIn, preppre}) => {
       return
     }
     try {
-      const response = await fetch('http://localhost:9000/api/v1/auth/login', {
+      const response = await fetch(`${config.BASE_URL}auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

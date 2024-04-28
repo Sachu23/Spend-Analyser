@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react"
 import axios from 'axios'
+import config from '../config/config.js'
 
 
-const BASE_URL = "http://localhost:9000/api/v1/";
+//const BASE_URL = "http://localhost:9000/api/v1/";
+const BASE_URL = config.BASE_URL;
 
 
 const GlobalContext = React.createContext()
