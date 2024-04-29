@@ -99,6 +99,7 @@ const Login = ({setLoggedIn, preppre}) => {
           placeholder="Enter your password here"
           onChange={(ev) => setPassword(ev.target.value)}
           className={'inputBox'}
+          type="password"
         />
         <label className="errorLabel">{passwordError}</label>
       </div>

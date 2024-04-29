@@ -34,6 +34,7 @@ function ExpenseForm() {
             date: '',
             category: '',
             description: '',
+            email: localStorage.getItem('email')
         })
     }
 

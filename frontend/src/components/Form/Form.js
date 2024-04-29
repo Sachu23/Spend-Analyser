@@ -15,10 +15,9 @@ function Form() {
         date: '',
         category: '',
         description: '',
-        email: localStorage.getItem('email')
     })
 
-    const { title, amount, date, category,description, email } = inputState;
+    const { title, amount, date, category,description } = inputState;
 
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})
