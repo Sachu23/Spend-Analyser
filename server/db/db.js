@@ -4,7 +4,7 @@ const db = async () => {
     try {
         mongoose.set('strictQuery', false)
         //await mongoose.connect(process.env.MONGO_URI)
-        await mongoose.connect('mongodb+srv://ssrini52:Sachu%40007@cluster0.j0uzqjk.mongodb.net/Spend-Analyser', {
+        await mongoose.connect('', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         }).then(() => console.log('Connected to MongoDB'))
